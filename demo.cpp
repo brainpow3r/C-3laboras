@@ -10,7 +10,7 @@ class Window : public wxFrame {
         VardinisTrikampis3D triangle;
         VardineSfera3D sfera;
     public:
-        Window(VardinisKubas3D *c, VardininisTrikampis3D *t, VardineSfera3D *s) : wxFrame(nullptr, exID_ANY, "Figuros") {
+        Window(VardinisKubas3D *c, VardinisTrikampis3D *t, VardineSfera3D *s) : wxFrame(nullptr, wxID_ANY, "Figuros") {
             cube = *c;
             triangle = *t;
             sfera = *s;
@@ -27,15 +27,15 @@ class Window : public wxFrame {
 
 class Program : public wxApp {
     public:
-        virtual bool onInit() override {
+        virtual bool onInit() /*override*/ {
            VardinisTaskas3D *t1 = new VardinisTaskas3D("A", "Taskas1", 1, 1, 1);
-           VardinisTaskas3D *t2 = new VardinisTaskas3D("A", "Taskas1", 1, 1, 1);
-           VardinisTaskas3D *t3 = new VardinisTaskas3D("A", "Taskas1", 1, 1, 1);
+           VardinisTaskas3D *t2 = new VardinisTaskas3D("A", "Taskas1", 5, 5, 5);
+           VardinisTaskas3D *t3 = new VardinisTaskas3D("A", "Taskas1", 8, 8, 8);
 
            VardinisKubas3D *k = new VardinisKubas3D("Q", "Kubas", t1, 4);
-           VardinisTrikampis3D *t = new VardinisTrikampis3D("X", "Trikampis", t1, t2, t3);
+           VardinisTrikampis3D *t = new VardinisTrikampis3D("X", "Trikampis", *t1, *t2, *t3);
            VardineSfera3D *s = new VardineSfera3D("S", "Sfera", 3, t3); 
-           new Window(&k, &t, &s);
+           new Window(k, t, s);
            return true;
         }
 };

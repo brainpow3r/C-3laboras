@@ -12,6 +12,7 @@ class VardinisTrikampis3D {
         VardinisTaskas3D *c;
         VardinisTaskas3D *center;
     public:
+	VardinisTrikampis3D();
         VardinisTrikampis3D(char *name, char *info, VardinisTaskas3D first, VardinisTaskas3D second, VardinisTaskas3D third);
         VardinisTrikampis3D(VardinisTrikampis3D &copy);
 

@@ -5,6 +5,15 @@
 
 #define SEPARATOR std::cout << "-----------------------------" << std::endl
 
+VardinisTrikampis3D::VardinisTrikampis3D() {
+	this->name = nullptr;
+	this->info = nullptr;
+	this->a = nullptr;
+	this->b = nullptr;
+	this->c = nullptr;
+	this->center = nullptr;
+}
+
 VardinisTrikampis3D::VardinisTrikampis3D(char *name, char *info, VardinisTaskas3D first, 
                                         VardinisTaskas3D second, VardinisTaskas3D third) {
 

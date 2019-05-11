@@ -5,6 +5,15 @@
 
 #define SEPARATOR std::cout << "-----------------------------" << std::endl
 
+VardineSfera3D::VardineSfera3D() {
+	this->name = nullptr;
+	this->info = nullptr;
+	this->radius_length = 0;
+	this->center = nullptr;
+	this->border_point = nullptr;
+	this->radius = nullptr;
+}
+
 VardineSfera3D::VardineSfera3D(char *name, char *info, double radius_length, VardinisTaskas3D *center) {
     
     if( name != nullptr ){    

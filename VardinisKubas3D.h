@@ -13,6 +13,7 @@ class VardinisKubas3D {
 
         void calculateCubePoints(VardinisTaskas3D *a);
     public:
+	VardinisKubas3D();
         VardinisKubas3D(char *name, char *info, VardinisTaskas3D *a, double vertex_length);
         VardinisKubas3D(VardinisKubas3D &copy);
 

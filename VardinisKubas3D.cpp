@@ -5,6 +5,12 @@
 
 #define SEPARATOR std::cout << "-----------------------------" << std::endl
 
+VardinisKubas3D::VardinisKubas3D() {
+	this->name = nullptr;
+	this->info = nullptr;
+	this->vertex_length = 0;
+}
+
 VardinisKubas3D::VardinisKubas3D(char *name, char *info, VardinisTaskas3D *a, double vertex_length) {
 
     if( name != nullptr ){

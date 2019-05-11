@@ -12,6 +12,7 @@ class VardineSfera3D {
         VardinisTaskas3D *border_point;
         VardineAtkarpa3D *radius;
     public:
+	VardineSfera3D();
         VardineSfera3D(char *name, char *info, double radius, VardinisTaskas3D *center);
         VardineSfera3D(VardineSfera3D &copy);
 
